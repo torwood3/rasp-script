@@ -17,8 +17,7 @@ done
 echo "Change root password"
 sudo passwd root
 
-
-echo "Reconnect as $username"
+echo "Reconnect as $username and run secureUser.sh"
 
 
 
