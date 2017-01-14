@@ -17,6 +17,11 @@ done
 echo "Change root password"
 sudo passwd root
 
+echo "Block ssh for root"
+echo "=> do sudo nano /etc/ssh/sshd_config"
+echo "then change PermitRootLogin yes to no"
+echo "add AllowUsers $USER"
+
 echo "Reconnect as $username and run secureUser.sh"
 
 
