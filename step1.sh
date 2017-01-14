@@ -22,7 +22,7 @@ echo "=> do sudo nano /etc/ssh/sshd_config"
 echo "then change PermitRootLogin yes to no"
 echo "add AllowUsers $USER"
 
-echo "Reconnect as $username and run secureUser.sh"
+echo "Reconnect as $username and run step2.sh"
 
 
 

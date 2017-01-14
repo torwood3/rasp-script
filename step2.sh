@@ -3,4 +3,4 @@
 echo "Suppression of the pi user"
 sudo deluser pi
 
-echo "Reboot now"
+sudo bash -c "echo '' > /etc/motd"
