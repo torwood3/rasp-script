@@ -13,11 +13,15 @@ do
     fi
 done
 
-echo "Suppression of the pi user"
-sudo deluser pi
 
 echo "Change root password"
 sudo passwd root
+
+echo "Change to root"
+su
+
+echo "Suppression of the pi user"
+sudo deluser pi
 
 echo "Block ssh for root"
 sudo echo "PermitRootLogin no" >> /etc/ssh/sshd_config
