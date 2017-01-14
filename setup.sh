@@ -1,3 +1,7 @@
+#!/bin/sh
+
+#curl -Lo- https://raw.githubusercontent.com/torwood3/rasp-script/master/setup.sh | bash
+
 echo "Doing Debian Updates (slow) ..."
 sudo aptitude -y update
 sudo aptitude -y upgrade
@@ -33,5 +37,5 @@ sudo aptitude -y dist-upgrade
 sudo aptitude -y autoclean
 sudo aptitude -y full-upgrade
 
-cd /home/pi
-git clone https://github.com/torwood3/rasp-script.git Scripts
+git clone https://github.com/torwood3/rasp-script.git /home/pi/scripts
+
