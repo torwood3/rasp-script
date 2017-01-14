@@ -17,16 +17,9 @@ done
 echo "Change root password"
 sudo passwd root
 
-echo "Change to root"
-su
 
-echo "Suppression of the pi user"
-sudo deluser pi
+echo "Reconnect as $username"
 
-echo "Block ssh for root"
-sudo echo "PermitRootLogin no" >> /etc/ssh/sshd_config
-
-sudo /etc/init.d/sshd restart
 
 
 
