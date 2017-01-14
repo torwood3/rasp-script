@@ -1,9 +1,10 @@
 #!/bin/sh
 
 echo "Suppression of the pi user"
-deluser pi
+sudo deluser pi
 
 echo "Block ssh for root"
-echo "PermitRootLogin no" >> /etc/ssh/sshd_config
+echo "=> do sudo nano /etc/ssh/sshd_config"
+echo "then change PermitRootLogin yes to no"
 
-sudo /etc/init.d/sshd restart
+echo "Reboot now"
