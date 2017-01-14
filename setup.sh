@@ -19,6 +19,8 @@ echo "Installation of base finish" >> /home/pi/installation-steps
 
 echo "Installing Languages"
 sudo aptitude -y install python
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 echo "Installing web server"
 sudo aptitude -y install nginx
