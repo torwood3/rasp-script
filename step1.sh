@@ -2,7 +2,7 @@
 
 echo "Setup for raspberry"
 
-echo "User"
+echo "************** User ***************"
 read -p "What name for the new pi?" newuser
 sudo adduser $newuser
 
@@ -12,8 +12,8 @@ do
 		sudo adduser $newuser $i
     fi
 done
-
-
+echo ""
+echo "************** root ***************"
 echo "Change root password"
 sudo passwd root
 
