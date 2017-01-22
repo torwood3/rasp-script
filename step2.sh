@@ -50,5 +50,20 @@ do_letsecnrypt(){
     apt-get install certbot -t jessie-backports -y
 }
 
+
+
+
+echo ""
+echo "************** root ***************"
+echo "Change root password"
+rootpwd=$(whiptail --title "Root" --inputbox "Root password ?" 10 60 Morgan 3>&1 1>&2 2>&3)
+
+echo $rootpwd | passwd root --stdin > /dev/null
+
+echo "Suppression of the pi user"
+deluser pi
+
+bash -c "echo '' > /etc/motd"
+
 calc_wt_size
 do_tools

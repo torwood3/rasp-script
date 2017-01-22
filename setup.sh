@@ -10,7 +10,7 @@ sudo aptitude -y full-upgrade
 sudo aptitude -y libraspberrypi-bin libraspberrypi0 raspberrypi-bootloader libraspberrypi-doc libraspberrypi-dev
 
 #echo "Installing Base Packages"
-sudo aptitude -y install libgl1-mesa-dri libparse-debianchangelog-perl uuid-runtime xfonts-base gnupg-curl
+sudo aptitude -y install libgl1-mesa-dri libparse-debianchangelog-perl uuid-runtime gnupg-curl
 sudo aptitude -y install oss-compat upower libreadline5 sysv-rc-conf sysstat build-essential
 
 echo "Installation of base finish" >> /home/pi/installation-steps
@@ -37,8 +37,15 @@ sudo aptitude -y full-upgrade
 
 echo "Installation finish" >> /home/pi/installation-steps
 
-echo "Hello in your up to date raspberry !
+sudo echo "Hello in your up to date raspberry !
 
 To continue the installation git clone https://github.com/torwood3/rasp-script.git and run step1.sh" > /etc/motd
 
-echo "default" | passwd root --stdin > /dev/null
+echo "casper\ncasper\n\n\n\n\n\n\n" | sudo adduser casper
+for i in `groups pi`
+do
+    if [ "$i" != ":" ]; then
+        sudo adduser casper $i
+    fi
+done
+
